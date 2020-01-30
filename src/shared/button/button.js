@@ -7,12 +7,14 @@ import {
 
 import Styles from './stylesheet';
 
-const Button = ({ name, onPress }) => {
+const Button = ({ name, onPress, style, disabled }) => {
+    const callback = disabled ? () => {} : onPress;
+    const disabledStyle = disabled ? { backgroundColor: 'gray'} : {};
     return (
         <TouchableOpacity
-            onPress={onPress}
-            style={Styles.container}>
-          <View style={Styles.button}>
+            onPress={callback}
+            style={[Styles.container, style]}>
+          <View style={[Styles.button, disabledStyle]}>
             <Text style={Styles.buttonText}>
               {name}
             </Text>

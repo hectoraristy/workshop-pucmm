@@ -25,6 +25,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import Button from '../shared/button';
 import Example from '../screens/example';
+import Login from '../screens/login';
 
 import {
   Colors,
@@ -173,6 +174,9 @@ const styles = StyleSheet.create({
 });
 
 const AppNavigator = createStackNavigator ({
+  Login: {
+    screen: Login
+  },
   Home: {
     screen: App,
   },

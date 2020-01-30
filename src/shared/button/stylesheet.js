@@ -2,14 +2,14 @@ import { StyleSheet} from 'react-native';
 
 const styles = {
     container: {
-        height: 50,
-        width: 100
+        height: 45,
     },
     button: {
-        borderColor: 'purple',
-        borderWidth: 4,
-        backgroundColor: 'red',
+        flex: 1,
+        backgroundColor: 'blue',
+        borderWidth: 2,
         alignItems: 'center',
+        justifycontent: 'center',
         borderRadius: 2,
     },
     buttonText: {
